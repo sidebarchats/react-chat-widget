@@ -24,6 +24,7 @@ class Widget extends Component {
       this.props.handleNewUserMessage(userInput);
     }
     event.target.message.value = '';
+    return Promise.resolve();
   }
 
   render() {

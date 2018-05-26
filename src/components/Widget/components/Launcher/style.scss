@@ -20,6 +20,11 @@
 
 .open-launcher {
   @include animation(0, 0.5s, rotation-rl);
+
+  svg {
+    fill: $white;
+    margin-top: 5px;
+  }
 }
 
 .close-launcher {

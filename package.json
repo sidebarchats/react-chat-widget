@@ -22,6 +22,7 @@
     "immutable": "^3.8.1",
     "marked": "^0.3.19",
     "prop-types": "^15.5.10",
+    "react-autosize-textarea": "^3.0.3",
     "react-immutable-proptypes": "^2.1.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"

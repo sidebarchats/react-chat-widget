@@ -1,38 +1,40 @@
 @import "variables.scss";
 
 .sender {
-  align-items: center;
+  height: 100%;
   display: flex;
+  min-height: 45px;
+  align-items: center;
   background-color: $white;
-  height: 45px;
-  padding: 5px;
-  border-top: 1px solid $grey-2;
+  padding: 5px 5px 7px 5px;
   border-radius: 0 0 20px 20px;
+  border-top: 1px solid $grey-2;
 }
 
 .new-message {
-  width: 100%;
   border: 0;
-  background-color: $white;
-  height: 30px;
+  width: 100%;
   padding-left: 15px;
+  resize: none !important;
+  background-color: $white;
+  font-family: 'Muli', sans-serif;
 
-  &::placeholder {
-    color: $grey-3;
-  }
+  &::placeholder { color: $grey-3; }
 
-  &:focus {
-    outline: none;
-  }
+  &:focus { outline: none; }
 }
 
 .send {
-  background: $white;
   border: 0;
+  outline: none;
+  background: $white;
 
-  .send-icon {
+  svg {
     height: 25px;
+    fill: #cbcbcb;
   }
+
+  &.sendable svg { fill: $turqois-1; }
 }
 
 @media screen and (max-width: 800px)  {
