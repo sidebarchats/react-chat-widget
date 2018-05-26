@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Badge from './components/Badge';
 
-import close from 'assets/clear-button.svg';
-
-import { messageSvg } from '../../../../constants';
+import { messageSvg, closeSvg } from '../../../../constants';
 
 import './style.scss';
 
@@ -14,9 +12,8 @@ const Launcher = ({ toggle, chatOpened, badge }) =>
     <Badge badge={badge} />
     {
       chatOpened ?
-        <img src={close} className="close-launcher" alt="" /> :
+        <div className="close-launcher">{ closeSvg }</div> :
         <div className="open-launcher">{ messageSvg }</div>
-        // <img src={openLauncher} className="open-launcher" alt="" />
     }
   </button>;
 

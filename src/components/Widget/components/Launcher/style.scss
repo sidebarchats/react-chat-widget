@@ -28,8 +28,13 @@
 }
 
 .close-launcher {
-  width: 16px;
   @include animation(0, 0.5s, rotation-lr);
+
+  svg {
+    width: 22px;
+    fill: $white;
+    margin-top: 3px;
+  }
 }
 
 @media screen and (max-width: 800px){
