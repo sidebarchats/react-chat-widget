@@ -40,6 +40,7 @@ class Widget extends Component {
         fullScreenMode={this.props.fullScreenMode}
         badge={this.props.badge}
         autofocus={this.props.autofocus}
+        handleEndChat={this.props.handleEndChat}
       />
     );
   }
@@ -55,7 +56,8 @@ Widget.propTypes = {
   showCloseButton: PropTypes.bool,
   fullScreenMode: PropTypes.bool,
   badge: PropTypes.number,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
+  handleEndChat: PropTypes.func,
 };
 
 export default connect()(Widget);

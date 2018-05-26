@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { moreSvg, powerSvg } from '../../../../../../constants';
+
 import close from 'assets/clear-button.svg';
 import './style.scss';
 
@@ -30,9 +32,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <button className={ `close-button ${menuOpen ? 'open' : ''}` } onClick={ this.handleShowMenu }>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-            <path d="M24 16c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 4c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
-          </svg>
+          { moreSvg }
         </button>
 
         { titleAvatar &&
@@ -41,6 +41,12 @@ class Header extends React.Component {
           </div> }
 
         <div className="title">{title}</div>
+
+        <div className={ `menu ${menuOpen ? 'open' : ''}` }>
+          <ul>
+            <li><a onClick={ handleEndChat }>{ powerSvg } End Chat</a></li>
+          </ul>
+        </div>
       </div>
     )
   }

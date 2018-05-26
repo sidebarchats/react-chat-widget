@@ -26,6 +26,7 @@ const WidgetLayout = props =>
         disabledInput={props.disabledInput}
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
+        handleEndChat={props.handleEndChat}
       />
     }
     {
@@ -50,7 +51,8 @@ WidgetLayout.propTypes = {
   disabledInput: PropTypes.bool,
   fullScreenMode: PropTypes.bool,
   badge: PropTypes.number,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
+  handleEndChat: PropTypes.func,
 };
 
 export default connect(store => ({
