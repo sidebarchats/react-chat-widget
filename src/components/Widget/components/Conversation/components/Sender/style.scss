@@ -3,18 +3,23 @@
 .sender {
   align-items: center;
   display: flex;
-  background-color: $grey-2;
+  background-color: $white;
   height: 45px;
   padding: 5px;
-  border-radius: 0 0 10px 10px;
+  border-top: 1px solid $grey-2;
+  border-radius: 0 0 20px 20px;
 }
 
 .new-message {
   width: 100%;
   border: 0;
-  background-color: $grey-2;
+  background-color: $white;
   height: 30px;
   padding-left: 15px;
+
+  &::placeholder {
+    color: $grey-3;
+  }
 
   &:focus {
     outline: none;
@@ -22,7 +27,7 @@
 }
 
 .send {
-  background: $grey-2;
+  background: $white;
   border: 0;
 
   .send-icon {

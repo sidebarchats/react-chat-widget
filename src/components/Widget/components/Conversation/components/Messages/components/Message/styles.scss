@@ -9,6 +9,7 @@
 .client {
   @include message-bubble($turqois-2);
   margin-left: auto;
+  color: #fdfdfd;
 }
 
 .response {

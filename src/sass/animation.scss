@@ -29,6 +29,15 @@
   }
 }
 
+@include keyframes(rotation-tl) {
+  from  {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
 @include keyframes(rotation-lr) {
   from  {
     transform: rotate(-90deg);
