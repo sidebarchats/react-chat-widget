@@ -11,6 +11,11 @@
   border-top: 1px solid $grey-2;
 }
 
+.full-screen .sender {
+  height: auto;
+  padding: 7px 5px 12px 5px;
+}
+
 .new-message {
   border: 0;
   width: 100%;
@@ -35,11 +40,4 @@
   }
 
   &.sendable svg { fill: $turqois-1; }
-}
-
-@media screen and (max-width: 800px)  {
-  .sender {
-    border-radius: 0;
-    flex-shrink: 0;
-  }
 }

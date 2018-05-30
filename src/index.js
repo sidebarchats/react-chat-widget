@@ -37,8 +37,8 @@ ConnectedWidget.propTypes = {
 };
 
 ConnectedWidget.defaultProps = {
-  title: 'Welcome',
-  subtitle: 'This is your chat subtitle',
+  title: '',
+  subtitle: '',
   senderPlaceHolder: 'Type a message...',
   showCloseButton: true,
   fullScreenMode: false,

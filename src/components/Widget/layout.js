@@ -12,8 +12,7 @@ const WidgetLayout = props =>
       `widget-container ${props.fullScreenMode ? 'full-screen' : ''} ${props.showChat ? 'opened' : ''}`
     }
   >
-    {
-      props.showChat &&
+    { props.showChat &&
       <Conversation
         title={props.title}
         subtitle={props.subtitle}
@@ -27,15 +26,12 @@ const WidgetLayout = props =>
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
         handleEndChat={props.handleEndChat}
-      />
-    }
-    {
-      !props.fullScreenMode &&
-      <Launcher
-        toggle={props.onToggleConversation}
-        badge={props.badge}
-      />
-    }
+      /> }
+
+    <Launcher
+      toggle={props.onToggleConversation}
+      badge={props.badge}
+    />
   </div>;
 
 WidgetLayout.propTypes = {
