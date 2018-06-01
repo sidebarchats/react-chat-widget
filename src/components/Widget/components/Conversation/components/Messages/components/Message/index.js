@@ -11,6 +11,7 @@ class Message extends PureComponent {
     return (
       <div className={this.props.message.get('sender')}>
         <div className="message-text" dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />
+        <div className="time-stamp">7:22 am</div>
       </div>
     );
   }

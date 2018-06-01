@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.join(__dirname, '/lib'),
+    path: path.join(__dirname, '../widget/node_modules/react-chat-widget/lib'),
     filename: 'index.js',
     library: 'react-chat-widget',
     libraryTarget: 'umd'

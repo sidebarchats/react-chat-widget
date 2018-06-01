@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import TextareaAutosize from 'react-autosize-textarea';
 
-import { sendSvg } from '../../../../../../constants';
+import sendSvg from 'assets/send-icon.svg';
+import sendEnabledSvg from 'assets/send-icon-enabled.svg';
 
 import './style.scss';
 
@@ -50,7 +51,7 @@ class Sender extends React.Component {
         />
 
         <button className={ `send ${sendable ? 'sendable' : ''}` } disabled={ !sendable } type="submit">
-          { sendSvg }
+          <img src={ sendable ? sendEnabledSvg : sendSvg } />
         </button>
       </form>
     );
