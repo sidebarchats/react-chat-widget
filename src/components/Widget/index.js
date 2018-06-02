@@ -28,6 +28,7 @@ class Widget extends Component {
   }
 
   render() {
+    console.log('messages :', this.props.messages);
     return (
       <WidgetLayout
         onToggleConversation={this.toggleConversation}
@@ -42,6 +43,7 @@ class Widget extends Component {
         badge={this.props.badge}
         autofocus={this.props.autofocus}
         handleEndChat={this.props.handleEndChat}
+        messages={this.props.messages}
       />
     );
   }
@@ -59,6 +61,7 @@ Widget.propTypes = {
   badge: PropTypes.number,
   autofocus: PropTypes.bool,
   handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default connect()(Widget);

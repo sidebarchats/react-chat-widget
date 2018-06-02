@@ -26,6 +26,7 @@ const WidgetLayout = props =>
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
         handleEndChat={props.handleEndChat}
+        messages={props.messages}
       /> }
 
     <Launcher
@@ -49,6 +50,7 @@ WidgetLayout.propTypes = {
   badge: PropTypes.number,
   autofocus: PropTypes.bool,
   handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default connect(store => ({

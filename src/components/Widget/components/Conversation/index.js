@@ -18,6 +18,7 @@ const Conversation = props =>
     />
     <Messages
       profileAvatar={props.profileAvatar}
+      passedMessages={props.messages}
     />
     <Sender
       sendMessage={props.sendMessage}
@@ -39,6 +40,7 @@ Conversation.propTypes = {
   disabledInput: PropTypes.bool,
   autofocus: PropTypes.bool,
   handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default Conversation;

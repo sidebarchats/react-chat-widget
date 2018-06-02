@@ -19,6 +19,7 @@ const ConnectedWidget = props =>
       badge={props.badge}
       autofocus={props.autofocus}
       handleEndChat={props.handleEndChat}
+      messages={props.messages}
     />
   </Provider>;
 
@@ -34,6 +35,7 @@ ConnectedWidget.propTypes = {
   badge: PropTypes.number,
   autofocus: PropTypes.bool,
   handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 ConnectedWidget.defaultProps = {
@@ -43,7 +45,8 @@ ConnectedWidget.defaultProps = {
   showCloseButton: true,
   fullScreenMode: false,
   badge: 0,
-  autofocus: true
+  autofocus: true,
+  messages: {},
 };
 
 export default ConnectedWidget;
