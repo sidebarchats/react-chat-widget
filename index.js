@@ -5,6 +5,7 @@ import {
   addLinkSnippet,
   renderCustomComponent,
   toggleWidget,
+  openWidget,
   toggleInputDisabled,
   dropMessages
 } from './src/store/actions/dispatcher';
@@ -16,6 +17,7 @@ export {
   addLinkSnippet,
   renderCustomComponent,
   toggleWidget,
+  openWidget,
   toggleInputDisabled,
   dropMessages
 };

@@ -20,12 +20,21 @@ class Sender extends React.Component {
     this.state = initialState();
   }
 
-  handleSubmit = e => this.props.sendMessage(e)
-    .then(() => this.setState({
-      maxHeight: 80,
-      messageValue: '',
-      sendable: false,
-    }));
+  handleSubmit = e => {
+    if (e) e.preventDefault();
+
+    const { messageValue, sendable } = this.state;
+
+    if (!sendable || !messageValue) return;
+
+    this.props.sendMessage(messageValue)
+      .then(() =>
+        this.setState({
+          maxHeight: 80,
+          messageValue: '',
+          sendable: false,
+        }));
+  }
 
   handleMessageChange = e =>
     this.setState({
@@ -33,9 +42,16 @@ class Sender extends React.Component {
       sendable: e.target.value.length > 0,
     });
 
+  handleEnterPress = e => {
+    if (e.keyCode == 13 && e.shiftKey == false && e.ctrlKey == false) {
+      e.preventDefault();
+      this.handleSubmit();
+    }
+  }
+
   render() {
     const { placeholder, disabledInput, autofocus } = this.props;
-    const { maxHeight, sendable } = this.state;
+    const { maxHeight, messageValue, sendable } = this.state;
 
     return (
       <form className="sender" onSubmit={ this.handleSubmit }>
@@ -46,12 +62,17 @@ class Sender extends React.Component {
           disabled={ disabledInput }
           name="message"
           onChange={ this.handleMessageChange }
+          onKeyDown={ this.handleEnterPress }
           placeholder={ placeholder }
           style={ { maxHeight: maxHeight, boxSizing: 'border-box' } }
+          value={ messageValue }
         />
 
-        <button className={ `send ${sendable ? 'sendable' : ''}` } disabled={ !sendable } type="submit">
-          <img src={ sendable ? sendEnabledSvg : sendSvg } />
+        <button
+          className={ `send ${sendable ? 'sendable' : ''}` }
+          disabled={ !sendable }
+          type="submit"
+        ><img src={ sendable ? sendEnabledSvg : sendSvg } />
         </button>
       </form>
     );

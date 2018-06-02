@@ -32,8 +32,6 @@ class Messages extends Component {
   render() {
     const displayMessages = setupDisplayMessages(this.props.passedMessages);
 
-    console.log('displayMessages :', displayMessages);
-
     return (
       <div id="messages" className="messages-container">
         { displayMessages.map((message, index) =>

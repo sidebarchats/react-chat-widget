@@ -16,19 +16,16 @@ class Widget extends Component {
     this.props.dispatch(toggleChat());
   }
 
-  handleMessageSubmit = (event) => {
-    event.preventDefault();
-    const userInput = event.target.message.value;
+  handleMessageSubmit = userInput => {
     if (userInput) {
       this.props.dispatch(addUserMessage(userInput));
       this.props.handleNewUserMessage(userInput);
     }
-    event.target.message.value = '';
+
     return Promise.resolve();
   }
 
   render() {
-    console.log('messages :', this.props.messages);
     return (
       <WidgetLayout
         onToggleConversation={this.toggleConversation}
