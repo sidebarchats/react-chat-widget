@@ -12,6 +12,7 @@
   border-radius: 50%;
   align-self: flex-end;
   background-image: $gradient;
+  transition: all .5s ease-in-out;
   box-shadow: 0px 2px 10px 1px $grey-3;
 
   &:focus {
@@ -19,11 +20,13 @@
   }
 }
 
+.opened .launcher { border-top-right-radius: 4px; }
+
 .open-launcher {
   @include animation(0, 0.5s, rotation-rl);
 
   img {
-    width: 30px;
+    width: 27px;
     margin-top: 5px;
   }
 }
@@ -32,7 +35,7 @@
   @include animation(0, 0.5s, rotation-lr);
 
   img {
-    width: 22px;
+    width: 18px;
     margin-top: 3px;
   }
 }
