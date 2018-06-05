@@ -42,7 +42,7 @@ export function setupDisplayMessages(messages) {
   const displayMessagesMap = [];
 
   for (let key in messages) {
-    displayMessagesArray.push({ ...messages[key] });
+    displayMessagesArray.push(messages[key]);
   }
 
   displayMessagesArray.sort((x, y) => {
