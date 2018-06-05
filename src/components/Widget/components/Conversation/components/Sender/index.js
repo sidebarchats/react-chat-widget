@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import TextareaAutosize from 'react-autosize-textarea';
 
-import sendSvg from 'assets/send-icon.svg';
-import sendEnabledSvg from 'assets/send-icon-enabled.svg';
+import sendSvg from '../../../../../../../assets/send-icon.svg';
+import sendEnabledSvg from '../../../../../../../assets/send-icon-enabled.svg';
 
 import './style.scss';
 

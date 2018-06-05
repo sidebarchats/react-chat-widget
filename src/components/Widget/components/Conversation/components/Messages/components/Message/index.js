@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import moment from 'moment';
 import marked from 'marked';
-import { PROP_TYPES } from 'constants';
+import { PROP_TYPES } from '../../../../../../../../constants';
 
 import './styles.scss';
 

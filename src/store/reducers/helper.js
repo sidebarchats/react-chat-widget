@@ -1,8 +1,8 @@
 import { Map } from 'immutable';
-import { MESSAGES_TYPES, MESSAGE_SENDER } from 'constants';
+import { MESSAGES_TYPES, MESSAGE_SENDER } from '../../constants';
 
-import Message from 'messagesComponents/Message';
-import Snippet from 'messagesComponents/Snippet';
+import Message from '../../components/Widget/components/Conversation/components/Messages/components/Message';
+import Snippet from '../../components/Widget/components/Conversation/components/Messages/components/Snippet';
 
 export function createNewMessage(text, sender, timeStamp = null) {
   return Map({

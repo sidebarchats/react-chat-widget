@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Badge from './components/Badge';
 
-import closeSvg from 'assets/close-icon.svg';
-import messageSvg from 'assets/message-icon.svg';
+import closeSvg from '../../../../../assets/close-icon.svg';
+import messageSvg from '../../../../../assets/message-icon.svg';
 
 import './style.scss';
 

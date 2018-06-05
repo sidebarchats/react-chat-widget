@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { moreSvg, powerSvg } from '../../../../../../constants';
 
-import close from 'assets/clear-button.svg';
+import close from '../../../../../../../assets/clear-button.svg';
 import './style.scss';
 
 const initialState = () => ({
