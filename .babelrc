@@ -10,8 +10,7 @@
       "root": ["./src"],
       "alias": {
         "tests-mocks": "./mocks",
-        "helper": "./src/store/reducers/helper.js",
-        "messagesComponents": "./src/components/Widget/components/Conversation/components/Messages/components"
+        "helper": "./src/store/reducers/helper.js"
       }
     }]
   ]
