@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Badge from './components/Badge';
 
-import openLauncher from 'assets/launcher_button.svg';
-import close from 'assets/clear-button.svg';
+import closeSvg from '../../../../../assets/close-icon.svg';
+import messageSvg from '../../../../../assets/message-icon.svg';
+
 import './style.scss';
 
 const Launcher = ({ toggle, chatOpened, badge }) =>
   <button type="button" className={chatOpened ? 'launcher hide-sm' : 'launcher'} onClick={toggle}>
-    <Badge badge ={badge} />
-    {
-      chatOpened ?
-        <img src={close} className="close-launcher" alt="" /> :
-        <img src={openLauncher} className="open-launcher" alt="" />
-    }
+    <Badge badge={badge} />
+    { chatOpened ?
+      <div className="close-launcher">
+        <img src={ closeSvg } />
+      </div> :
+      <div className="open-launcher">
+        <img src={ messageSvg } />
+      </div> }
   </button>;
 
 Launcher.propTypes = {

@@ -12,8 +12,7 @@ const WidgetLayout = props =>
       `widget-container ${props.fullScreenMode ? 'full-screen' : ''} ${props.showChat ? 'opened' : ''}`
     }
   >
-    {
-      props.showChat &&
+    { props.showChat &&
       <Conversation
         title={props.title}
         subtitle={props.subtitle}
@@ -26,15 +25,14 @@ const WidgetLayout = props =>
         disabledInput={props.disabledInput}
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
-      />
-    }
-    {
-      !props.fullScreenMode &&
-      <Launcher
-        toggle={props.onToggleConversation}
-        badge={props.badge}
-      />
-    }
+        handleEndChat={props.handleEndChat}
+        messages={props.messages}
+      /> }
+
+    <Launcher
+      toggle={props.onToggleConversation}
+      badge={props.badge}
+    />
   </div>;
 
 WidgetLayout.propTypes = {
@@ -50,7 +48,9 @@ WidgetLayout.propTypes = {
   disabledInput: PropTypes.bool,
   fullScreenMode: PropTypes.bool,
   badge: PropTypes.number,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
+  handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default connect(store => ({

@@ -8,11 +8,19 @@
 
 .client {
   @include message-bubble($turqois-2);
+  color: #fdfdfd;
   margin-left: auto;
+  border-bottom-right-radius: 0;
+  background: $gradient-opposite;
+
+  .time-stamp { color: #dbdbdb; }
 }
 
 .response {
   @include message-bubble($grey-2);
+  border-bottom-left-radius: 0;
+
+  .time-stamp { color: #a1a1a1; }
 }
 
 .message {
@@ -25,6 +33,13 @@
   p {
     margin: 0;
   }
+}
+
+.time-stamp {
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: right;
 }
 
 .avatar {

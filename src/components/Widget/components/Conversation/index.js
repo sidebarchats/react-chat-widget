@@ -14,9 +14,11 @@ const Conversation = props =>
       toggleChat={props.toggleChat}
       showCloseButton={props.showCloseButton}
       titleAvatar={props.titleAvatar}
+      handleEndChat={props.handleEndChat}
     />
     <Messages
       profileAvatar={props.profileAvatar}
+      passedMessages={props.messages}
     />
     <Sender
       sendMessage={props.sendMessage}
@@ -36,7 +38,9 @@ Conversation.propTypes = {
   toggleChat: PropTypes.func,
   showCloseButton: PropTypes.bool,
   disabledInput: PropTypes.bool,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
+  handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default Conversation;

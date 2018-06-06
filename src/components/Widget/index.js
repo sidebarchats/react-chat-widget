@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { toggleChat, addUserMessage } from 'actions';
+import { toggleChat, addUserMessage } from '../../store/actions';
 
 import WidgetLayout from './layout';
 
@@ -16,14 +16,13 @@ class Widget extends Component {
     this.props.dispatch(toggleChat());
   }
 
-  handleMessageSubmit = (event) => {
-    event.preventDefault();
-    const userInput = event.target.message.value;
+  handleMessageSubmit = userInput => {
     if (userInput) {
       this.props.dispatch(addUserMessage(userInput));
       this.props.handleNewUserMessage(userInput);
     }
-    event.target.message.value = '';
+
+    return Promise.resolve();
   }
 
   render() {
@@ -40,6 +39,8 @@ class Widget extends Component {
         fullScreenMode={this.props.fullScreenMode}
         badge={this.props.badge}
         autofocus={this.props.autofocus}
+        handleEndChat={this.props.handleEndChat}
+        messages={this.props.messages}
       />
     );
   }
@@ -55,7 +56,9 @@ Widget.propTypes = {
   showCloseButton: PropTypes.bool,
   fullScreenMode: PropTypes.bool,
   badge: PropTypes.number,
-  autofocus: PropTypes.bool
+  autofocus: PropTypes.bool,
+  handleEndChat: PropTypes.func,
+  messages: PropTypes.object,
 };
 
 export default connect()(Widget);
